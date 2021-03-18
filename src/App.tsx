@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/Header";
+import { LeftNav } from "./components/LeftNav";
+import { GlobalStalye } from "./styles/global";
+import { Dashboard } from "./pages/Dashboard";
+
+import { Route, BrowserRouter, Switch} from 'react-router-dom'
+import { TrasnsactionsPage } from "./pages/Transactions";
+import { TransactionsProvider } from "./hooks/useTransactions";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TransactionsProvider>
+    <BrowserRouter>
+      <GlobalStalye />
+      <div>
+        <LeftNav/>
+      </div>
+      <div>
+        <Header />
+        <Switch>
+          <Route path="/" component={Dashboard} exact/>
+          <Route path="/extrato-detalhado" component={TrasnsactionsPage}/>
+          </Switch>
+        
+      </div>
+      </BrowserRouter>
+    </TransactionsProvider>
   );
 }
 
