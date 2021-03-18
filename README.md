@@ -37,7 +37,7 @@
 
 </p>
 
-##💻 About
+## 💻 About
 ***
 💸 FinApp was developed with the aim of promoting education and financial control. In this web application you can make all your financial records to better control your money.
 
@@ -45,7 +45,7 @@
 
 ***
 
-##⚙️ Features
+## ⚙️ Features
 - [x] the application makes a request to the api that returns the user data:
    - [x] Username;
    - [x] id;
@@ -59,7 +59,7 @@
 
 ***
 
-##🖥️ layout
+## 🖥️ layout
 
 <img align="center" src="./src/assets/layout.png" alt="finapp layout">
 <p align="center">(Dashboard)</p>
@@ -68,7 +68,7 @@
 
 ***
 
-##🚀 How it works
+## 🚀 How it works
 
 for the time being this project is under development, so we don't have a back-end or a mobile version yet.
 
